@@ -48,7 +48,7 @@ const categories = [
 
 export default function Categories() {
   return (
-    <div className="flex flex-col items-start justify-center w-5/6">
+    <section className="flex flex-col items-start justify-center w-5/6">
       <p className="text-slate-500 text-base">{"Discover by topic"}</p>
       <h2 className="font-bold text-xl">Categories</h2>
       <div className="grid grid-cols-3 gap-4 mx-auto w-full pt-6">
@@ -56,6 +56,6 @@ export default function Categories() {
           <SimpleCategoryCard key={cat.label} card={cat} />
         ))}
       </div>
-    </div>
+    </section>
   );
 }
