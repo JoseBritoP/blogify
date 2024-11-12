@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import RecentPost from "./RecentPost";
+import Aside from "./Aside";
 
 export default function Menu() {
   return (
-    <div>
-      Menu
-    </div>
-  )
+    <main className="flex w-full gap-4 items-center mx-auto px-10">
+      <RecentPost />
+      <Aside />
+    </main>
+  );
 }
