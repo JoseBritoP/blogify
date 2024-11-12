@@ -1,13 +1,5 @@
 import * as React from "react";
 
-import {
-  Card,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-
 type Category = "Style" | "Fashion" | "Food" | "Travel" | "Culture" | "Coding";
 
 interface CardBlogProps {
@@ -52,22 +44,20 @@ export function CardPopularBlog({ card }: CardBlogProps) {
       : "";
 
   return (
-    <Card className="w-[350px]">
-      <CardHeader className="flex flex-col items-start justify-center">
-        <CardDescription
-          className={`${bgColor} text-slate-200 font-semibold text-lg rounded-full py-1 px-2`}
+    <article className="bg-white w-[350px] px-3 rounded-2xl py-2 border h-28 max-h-36">
+      <section className="flex flex-col justify-center items-start">
+        <p
+          className={`${bgColor} text-slate-200 font-semibold text-sm rounded-full p-1 px-2`}
         >
           {card.category}
-        </CardDescription>
-        <CardTitle className="text-slate-800 font-semibold text-xl">
-          {card.title}
-        </CardTitle>
-      </CardHeader>
-      <CardFooter className="flex justify-center items-center gap-x-2">
+        </p>
+        <h1 className="text-slate-800 font-semibold text-xl">{card.title}</h1>
+      </section>
+      <section className="flex justify-center items-center gap-x-4">
         <p className="font-bold text-slate-950">{card.author}</p>
         {"-"}
         <p className="text-slate-700 font-medium">{card.date}</p>
-      </CardFooter>
-    </Card>
+      </section>
+    </article>
   );
 }
