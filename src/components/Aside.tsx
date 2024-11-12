@@ -1,5 +1,5 @@
 import React from "react";
-import MostPopularPost from "./MostPopularPost";
+import MostPopularPost from "./MostPopularBlog";
 import Categories from "./Categories";
 import BlogsByEditor from "./BlogsByEditor";
 
