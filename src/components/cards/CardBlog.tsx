@@ -1,12 +1,6 @@
 import * as React from "react";
 
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-} from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 
 type Category = "Style" | "Fashion" | "Food" | "Travel" | "Culture" | "Coding";
@@ -20,20 +14,6 @@ interface CardBlogProps {
     img: string;
   };
 }
-/*
-label:'Style'
-className: "bg-sky-100 hover:bg-sky-200",
-label: "Fashion",
-className: "bg-purple-100 hover:bg-purple-200",
-label: "Food",
-className: "bg-green-100 hover:bg-green-200",
-label: "Travel",
-className: "bg-rose-100 hover:bg-rose-200",
-label: "Culture",
-className: "bg-orange-100 hover:bg-orange-200",
-label: "Coding",
-className: "bg-violet-100 hover:bg-violet-200",
-*/
 
 export function CardBlog({ card }: CardBlogProps) {
   const textColor =
@@ -52,25 +32,28 @@ export function CardBlog({ card }: CardBlogProps) {
       : "";
 
   return (
-    <Card className="w-full">
-      <CardHeader className="h-24 w-36 object-contain">
-        <Image alt={card.title} src={card.img} height={80} width={80} />
-      </CardHeader>
-      <CardContent className="flex flex-col items-start justify-center gap-10">
-        <p className="font-medium text-base text-slate-600">
-          {card.date} <small className="text-gray-800">-</small>
-          <span className={`${textColor} font-semibold uppercase`}>
-            {card.category}
-          </span>
-        </p>
-        <h1 className="text-gray-800 text-xl font-semibold">{card.title}</h1>
-        <p className="text-sm text-slate-700">{card.text}</p>
+    <Card className="w-full border rounded-2xl flex justify-center items-start gap-x-4">
+      <section className="w-5/6 border-l rounded-2xl">
+        <Image
+          alt={card.title}
+          src={card.img}
+          className="h-[300px] w-[400px] rounded-l-2xl"
+          height={800}
+          width={800}
+        />
+      </section>
+      <CardContent className="grid grid-cols-1">
+        <div className="flex flex-col justify-center items-start gap-y-4">
+          <p className="font-medium text-base text-slate-600">
+            {card.date} <small className="text-gray-800"> - </small>
+            <span className={`${textColor} font-semibold uppercase`}>
+              {card.category}
+            </span>
+          </p>
+          <h1 className="text-gray-800 text-2xl font-bold">{card.title}</h1>
+          <p className="text-base text-slate-700">{card.text}</p>
+        </div>
       </CardContent>
-      <CardFooter className="flex justify-start items-center">
-        <Button className="bg-none border-b border-rose-500 text-xl font-semibold">
-          Read more
-        </Button>
-      </CardFooter>
     </Card>
   );
 }
