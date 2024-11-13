@@ -52,7 +52,7 @@ export function CardBlog({ card }: CardBlogProps) {
       : "";
 
   return (
-    <Card className="w-[350px]">
+    <Card className="w-full">
       <CardHeader className="h-24 w-36 object-contain">
         <Image alt={card.title} src={card.img} height={80} width={80} />
       </CardHeader>
