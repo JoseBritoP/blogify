@@ -43,7 +43,7 @@ export function CardBlog({ card }: CardBlogProps) {
         />
       </section>
       <CardContent className="grid grid-cols-1">
-        <div className="flex flex-col justify-center items-start gap-y-4">
+        <div className="flex flex-col justify-center items-start gap-y-4 pt-2">
           <p className="font-medium text-base text-slate-600">
             {card.date} <small className="text-gray-800"> - </small>
             <span className={`${textColor} font-semibold uppercase`}>
