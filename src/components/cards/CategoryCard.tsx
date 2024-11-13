@@ -14,7 +14,7 @@ export function CategoryCard({ card }: CategoryCardProps) {
   return (
     <Link href={`/blog?cat=${card.label}`}>
       <article
-        className={`w-[150px] h-12 ${card.className} flex flex-row-reverse justify-center items-center gap-x-2 rounded-lg transition-colors duration-200 ease-out`}
+        className={`w-[150px] h-12 ${card.className} flex flex-row-reverse justify-center items-center gap-x-2 transition-colors duration-200 ease-out rounded-2xl`}
       >
         <h2 className="text-gray-800 font-semibold">{card.label}</h2>
         {card.img && (
