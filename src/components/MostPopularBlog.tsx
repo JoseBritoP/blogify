@@ -4,7 +4,7 @@ import { blogs } from "@/constants";
 
 export default function MostPopularBlog() {
   return (
-    <section className="flex flex-col items-start justify-start gap-y-4 mx-auto w-full px-10">
+    <section className="flex flex-col items-start justify-center w-5/6">
       <div>
         <p className="text-slate-500 text-base">{"What's hot"}</p>
         <h2 className="font-bold text-xl">Most Popular</h2>
