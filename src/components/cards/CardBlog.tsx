@@ -33,7 +33,7 @@ export function CardBlog({ card }: CardBlogProps) {
 
   return (
     <Card className="w-full border rounded-2xl flex justify-center items-start gap-x-4">
-      <section className="w-5/6 border-l rounded-2xl">
+      <section className="w-[1500px]  lg:w-5/6 border-l rounded-2xl">
         <Image
           alt={card.title}
           src={card.img}

@@ -9,6 +9,7 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import { MobileNavMenu } from "./MobileNav";
 
 const items = [
   {
@@ -31,7 +32,7 @@ const items = [
 
 export function NavigationMenu() {
   return (
-    <NavMenu>
+    <NavMenu className="hidden md:block">
       <NavigationMenuList>
         {items.map((item) => (
           <NavigationMenuItem key={item.label}>
@@ -43,6 +44,7 @@ export function NavigationMenu() {
           </NavigationMenuItem>
         ))}
       </NavigationMenuList>
+      <MobileNavMenu/>
     </NavMenu>
   );
 }
