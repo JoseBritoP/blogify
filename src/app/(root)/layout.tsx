@@ -8,12 +8,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="w-full bg-white text-gray-800">
-      <div className="mx-auto px-10">
-        <Navbar />
-        {children}
-        <Footer />
-      </div>
+    <div className="w-full bg-white text-gray-800 mx-auto px-10">
+      <Navbar />
+      {children}
+      <Footer />
     </div>
   );
 }
