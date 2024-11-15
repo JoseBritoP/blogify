@@ -22,8 +22,8 @@ export function CategoryCard({ card }: CategoryCardProps) {
             <Image
               alt={card.label}
               src={card.img}
-              height={30}
-              width={30}
+              height={60}
+              width={60}
               className="rounded-full"
             />
           </section>
