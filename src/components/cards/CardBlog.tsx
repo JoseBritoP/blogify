@@ -32,28 +32,31 @@ export function CardBlog({ card }: CardBlogProps) {
       : "";
 
   return (
-    <Card className="w-full border rounded-2xl flex justify-center items-start gap-x-4">
-      <section className="w-[1500px]  lg:w-5/6 border-l rounded-2xl">
-        <Image
-          alt={card.title}
-          src={card.img}
-          className="h-[300px] w-[400px] rounded-l-2xl"
-          height={800}
-          width={800}
-        />
-      </section>
-      <CardContent className="grid grid-cols-1">
-        <div className="flex flex-col justify-center items-start gap-y-4 pt-2">
-          <p className="font-medium text-base text-slate-600">
-            {card.date} <small className="text-gray-800"> - </small>
-            <span className={`${textColor} font-semibold uppercase`}>
-              {card.category}
-            </span>
-          </p>
-          <h1 className="text-gray-800 text-2xl font-bold">{card.title}</h1>
-          <p className="text-base text-slate-700">{card.text}</p>
-        </div>
-      </CardContent>
-    </Card>
+    <>
+      <Card className="w-full border rounded-2xl flex flex-col md:flex-row justify-center items-start gap-x-4 max-w-[400px] md:max-w-[800px]">
+        <section className="">
+          <Image
+            alt={card.title}
+            src={card.img}
+            className="h-[300px] w-[400px] md:w-[1000px] rounded-t-2xl"
+            height={800}
+            width={800}
+          />
+        </section>
+        <CardContent className="px-4">
+          <div className="flex flex-col justify-center items-start gap-y-4 pt-2">
+            <p className="font-medium text-base text-slate-600">
+              {card.date} <small className="text-gray-800"> - </small>
+              <span className={`${textColor} font-semibold uppercase`}>
+                {card.category}
+              </span>
+            </p>
+            <h1 className="text-gray-800 text-2xl font-bold">{card.title}</h1>
+            <p className="text-base text-slate-700">{card.text}</p>
+          </div>
+        </CardContent>
+      </Card>
+      
+    </>
   );
 }
