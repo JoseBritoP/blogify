@@ -36,7 +36,7 @@ const categories = [
 export default function CategoryList() {
   return (
     <section className="flex flex-col gap-4 mx-auto px-10 mb-10">
-      <h1 className="mt-14 text-2xl text-slate-700 font-semibold">Popular Categories</h1>
+      <h1 className="mt-6 text-2xl text-slate-700 font-semibold">Popular Categories</h1>
       <div className="grid grid-cols-2 md:grid-cols-3 md:gap-8 lg:grid-cols-6 gap-5">
         {categories.map((item) => (
           <CategoryCard key={item.label} card={item} />
