@@ -33,7 +33,7 @@ export function CardEditor({ card }: CardBlogProps) {
       : "";
 
   return (
-    <Card className="flex w-full min-w-[370px] border p-2 rounded-2xl max-h-[150px] ">
+    <Card className="flex w-[400px] md:w-[300px] border p-2 rounded-2xl max-h-[150px] lg:w-full ">
       <section className="w-1/3">
         <Image
           alt={card.title}

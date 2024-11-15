@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Card } from "../ui/card";
 
 type Category = "Style" | "Fashion" | "Food" | "Travel" | "Culture" | "Coding";
 
@@ -44,7 +45,7 @@ export function CardPopularBlog({ card }: CardBlogProps) {
       : "";
 
   return (
-    <article className="bg-white w-[350px] px-3 rounded-2xl py-2 border h-28 max-h-36">
+    <Card className="bg-white w-full max-w-[450px] sm:max-w-full md:w-[350px] px-3 rounded-2xl py-2 border h-28 sm:h-32 max-h-36 flex flex-col justify-center rounded-tl-none rounded-br-none">
       <section className="flex flex-col justify-center items-start">
         <p
           className={`${bgColor} text-slate-200 font-semibold text-sm rounded-full p-1 px-2`}
@@ -53,11 +54,11 @@ export function CardPopularBlog({ card }: CardBlogProps) {
         </p>
         <h1 className="text-slate-800 font-semibold text-xl">{card.title}</h1>
       </section>
-      <section className="flex justify-center items-center gap-x-4">
+      <section className="flex justify-start sm:justify-center items-center gap-x-4">
         <p className="font-bold text-slate-950">{card.author}</p>
         {"-"}
         <p className="text-slate-700 font-medium">{card.date}</p>
       </section>
-    </article>
+    </Card>
   );
 }

@@ -1,11 +1,11 @@
 import React from "react";
-import MostPopularPost from "./MostPopularBlog";
-import Categories from "./Categories";
-import BlogsByEditor from "./BlogsByEditor";
+import MostPopularPost from "./aside/MostPopularBlog";
+import Categories from "./aside/Categories";
+import BlogsByEditor from "./aside/BlogsByEditor";
 
 export default function Aside() {
   return (
-    <aside className="w-full lg:w-1/3 flex flex-col items-center justify-start gap-y-10 bg-sky-100">
+    <aside className="w-full flex flex-col items-center justify-start gap-y-5 lg:w-1/3">
       <MostPopularPost />
       <Categories />
       <BlogsByEditor />
