@@ -9,7 +9,7 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { MobileNavMenu } from "./MobileNav";
+
 
 const items = [
   {
@@ -44,7 +44,6 @@ export function NavigationMenu() {
           </NavigationMenuItem>
         ))}
       </NavigationMenuList>
-      <MobileNavMenu/>
     </NavMenu>
   );
 }
